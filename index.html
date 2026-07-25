@@ -1,78 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apple Toggle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Dashboard</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:transparent;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-}
-
-.switch{
-    position:relative;
-    display:inline-block;
-    width:52px;
-    height:32px;
-}
-
-.switch input{
-    display:none;
-}
-
-.slider{
-    position:absolute;
-    inset:0;
-    cursor:pointer;
-    background:#d1d1d6;
-    border-radius:999px;
-    transition:.28s cubic-bezier(.4,0,.2,1);
-}
-
-.slider:before{
-    content:"";
-    position:absolute;
-    height:28px;
-    width:28px;
-    left:2px;
-    top:2px;
-    background:#fff;
-    border-radius:50%;
-    box-shadow:
-        0 1px 3px rgba(0,0,0,.25),
-        0 2px 8px rgba(0,0,0,.18);
-    transition:.28s cubic-bezier(.4,0,.2,1);
-}
-
-input:checked + .slider{
-    background:#34C759;
-}
-
-input:checked + .slider:before{
-    transform:translateX(20px);
-}
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<label class="switch">
-<input type="checkbox" checked>
-<span class="slider"></span>
-</label>
+<div class="container">
+
+    <h1>📚 Learning Dashboard</h1>
+
+    <div class="progress-card">
+        <h2>Supply Chain Management</h2>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <p id="progressText">20% Completed</p>
+    </div>
+
+    <div id="courses">
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
